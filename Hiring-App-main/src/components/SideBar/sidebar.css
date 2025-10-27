@@ -1,0 +1,160 @@
+/* Sidebar Styling */
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 100px;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+  z-index: 999;
+  padding-top: 20px;
+
+  /* ✅ Enable Scrolling */
+  overflow-y: auto; /* Allows vertical scrolling */
+  max-height: calc(100vh - 100px); /* Ensures it doesn't overflow */
+}
+
+/* ✅ Hide Scrollbar for Clean UI */
+.sidebar::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Sidebar Hidden State (for toggling) */
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  width: 30px;
+  height: 30px;
+  top: 105px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: fixed;
+  background: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Toggle Button */
+.sidebar-toggle:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* Sidebar Content Wrapper */
+.side-bar-wrap {
+  margin-top: 50px;
+  padding: 15px;
+}
+
+/* Sidebar Search Box */
+.sidebar-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Search Input */
+.search-input {
+  width: 80%;
+  padding: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Search Input Focus Effect */
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Search Button */
+.search-btn {
+  padding: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Search Button */
+.search-btn:hover {
+  background: #0056b3;
+}
+
+/* Sidebar List */
+.sidebar-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Sidebar List Items */
+.sidebar-item ul li {
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar Links */
+.sidebar-item ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Sidebar Links */
+.sidebar-item ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Responsive Sidebar for Smaller Screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    top: 80px;
+  }
+
+  .sidebar-toggle {
+    top: 85px;
+    left: 5px;
+  }
+
+  .sidebar-item ul li a {
+    font-size: 14px;
+  }
+}

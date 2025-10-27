@@ -1,0 +1,146 @@
+/* Sidebar Container */
+.require-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 25vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-right: 2px solid #ddd;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+.require-header {
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Job Title Styling */
+.tit-req {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333 !important;  
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    background: #007bff;
+    color: white !important; /* Ensures visibility */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Title Content */
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #cd390c;
+    text-align: center;
+    max-width: 100%;
+    word-break: break-word;
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading State */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.loader {
+    width: 35px;
+    height: 35px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Requirements Heading */
+.requirements-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+/* Requirements List */
+.require-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+.require-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 14px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.require-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+.require-key {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+.require-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #007bff;
+    word-break: break-word; /* Ensures text wraps properly */
+}
+
+/* No Requirements */
+.no-requirements {
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .require-bar {
+        width: 35vw;
+    }
+}
+@media (max-width: 768px) {
+    .require-bar {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-right: none;
+    }  
+    .tit-req {
+        font-size: 20px;
+        padding: 8px;
+    }
+}

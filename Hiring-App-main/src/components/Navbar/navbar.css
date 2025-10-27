@@ -1,0 +1,52 @@
+.navbar {
+    padding: 10px;
+    /* background:transparent; */
+    top:0;
+    color: white;
+    display: flex;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.nav_logo{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+.nav-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.nav_btn{
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+.nav_btn:hover{
+    color: #f9f9f9;
+}
+.logout_btn{
+    background-color: #000000;
+    border: solid 1px #fff;
+    color: white;
+    margin-right: 50px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.logout_btn:hover{
+    background-color: #555;
+}

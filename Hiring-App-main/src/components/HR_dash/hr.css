@@ -1,0 +1,502 @@
+/* Enhanced HR Dashboard Styles */
+.hr {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.hr_dash {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hr_dash h1 {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #fff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.add_btn_hr {
+    width: 120px;
+    height: 55px;
+    display: flex;
+    background: linear-gradient(45deg, #10b981, #059669);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.add_btn_hr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.add_btn_hr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+    background: linear-gradient(45deg, #059669, #047857);
+}
+
+.add_btn_hr:hover::before {
+    left: 100%;
+}
+
+.add_btn_hr:active {
+    transform: translateY(0);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Search Input */
+.search-input {
+    width: 50%;
+    max-width: 600px;
+    height: 60px;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    color: white;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    position: relative;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+.search-input:focus {
+    border: 2px solid #ff7f50;
+    box-shadow: 0 0 0 4px rgba(255, 127, 80, 0.2), 0 8px 32px rgba(255, 127, 80, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.search-input:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Search Button */
+.search-btn {
+    width: 130px;
+    height: 60px;
+    display: flex;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(40, 167, 69, 0.3);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.search-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(40, 167, 69, 0.4);
+}
+
+.search-btn:hover::before {
+    left: 100%;
+}
+
+.search-btn:hover::after {
+    opacity: 1;
+}
+
+.search-btn:active {
+    transform: translateY(-1px);
+    transition: all 0.1s ease;
+}
+
+.jobs-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    z-index: 1;
+}
+
+.jobs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Unique Background Colors for 10 Jobs with Enhanced Gradients */
+.job:nth-child(10n + 1) {
+    background: linear-gradient(135deg, #ff6b6b, #ffcc5c);
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.3);
+}
+
+.job:nth-child(10n + 2) {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    box-shadow: 0 8px 32px rgba(54, 209, 220, 0.3);
+}
+
+.job:nth-child(10n + 3) {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    box-shadow: 0 8px 32px rgba(255, 154, 158, 0.3);
+}
+
+.job:nth-child(10n + 4) {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    box-shadow: 0 8px 32px rgba(132, 250, 176, 0.3);
+}
+
+.job:nth-child(10n + 5) {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    box-shadow: 0 8px 32px rgba(212, 252, 121, 0.3);
+}
+
+.job:nth-child(10n + 6) {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    box-shadow: 0 8px 32px rgba(255, 117, 140, 0.3);
+}
+
+.job:nth-child(10n + 7) {
+    background: linear-gradient(135deg, #c471f5, #fa71cd);
+    box-shadow: 0 8px 32px rgba(196, 113, 245, 0.3);
+}
+
+.job:nth-child(10n + 8) {
+    background: linear-gradient(135deg, #12c2e9, #c471ed);
+    box-shadow: 0 8px 32px rgba(18, 194, 233, 0.3);
+}
+
+.job:nth-child(10n + 9) {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    box-shadow: 0 8px 32px rgba(255, 175, 189, 0.3);
+}
+
+.job:nth-child(10n + 10) {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    box-shadow: 0 8px 32px rgba(31, 64, 55, 0.3);
+}
+
+/* Job Card Styling */
+.job {
+    width: 32%;
+    min-width: 300px;
+    height: 240px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.job::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.job::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.job:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.job:hover::before {
+    left: 100%;
+}
+
+.job:hover::after {
+    opacity: 1;
+}
+
+.job:active {
+    transform: translateY(-8px) scale(1.01);
+    transition: all 0.1s ease;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+    .job {
+        width: 48%;
+        min-width: 280px;
+    }
+    
+    .search-input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hr_dash {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .job {
+        width: 45%;
+        min-width: 300px;
+    }
+    
+    .search-input {
+        width: 70%;
+    }
+    
+    .search-bar {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hr {
+        padding-top: 100px;
+    }
+    
+    .hr_dash {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        width: 90%;
+    }
+    
+    .hr_dash h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .search-input {
+        width: 100%;
+        max-width: none;
+        height: 55px;
+        font-size: 1.1rem;
+    }
+    
+    .search-btn {
+        width: 100%;
+        max-width: 300px;
+        height: 55px;
+        font-size: 1rem;
+    }
+    
+    .jobs {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .job {
+        width: 100%;
+        min-width: unset;
+        height: 200px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hr {
+        padding-top: 80px;
+    }
+    
+    .hr_dash {
+        padding: 1rem;
+    }
+    
+    .hr_dash h1 {
+        font-size: 1.6rem;
+    }
+    
+    .add_btn_hr {
+        width: 100px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .search-input {
+        height: 50px;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    .search-btn {
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    .job {
+        height: 180px;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hr_dash,
+.search-bar,
+.jobs {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.job {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.job:nth-child(1) { animation-delay: 0.1s; }
+.job:nth-child(2) { animation-delay: 0.2s; }
+.job:nth-child(3) { animation-delay: 0.3s; }
+.job:nth-child(4) { animation-delay: 0.4s; }
+.job:nth-child(5) { animation-delay: 0.5s; }
+.job:nth-child(6) { animation-delay: 0.6s; }

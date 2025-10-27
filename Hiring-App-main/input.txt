@@ -1,0 +1,5 @@
+cd Hiring-app-main
+
+$env:PYTHONUTF8=1 
+
+npm start

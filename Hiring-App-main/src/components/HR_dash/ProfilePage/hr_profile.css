@@ -1,0 +1,165 @@
+/* General Container */
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 120px;
+  background: #f0f2f5;
+  background: url('D:\Sachin Projects\Hiring-App-main (1)\Hiring-App-main\pics\digital-technology-engineering-digital-telecoms-concept-hitech-futuristic-technology_184920-1219.avif') no-repeat center center/cover;
+  align-items: center;
+  justify-content: center;
+}
+.hr-profile-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 40px #36c80d;
+  }
+  
+/* Page Title */
+.profile__container h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #bdee0b;
+  margin-bottom: 20px;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Profile Card */
+.profile__details {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+  width: 420px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.profile__details:hover {
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Section Headings */
+.profile__details h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Input Fields */
+.profile__details__input {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.profile__details__input label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile__details__input input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fff;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.profile__details__input input:focus {
+  border-color: #3498db;
+  box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.4);
+}
+
+/* Allowed Emails */
+.allowed__emails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.allowed__emails div {
+  background: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.profile__details__input button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.profile__details__input button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Submit Button */
+.profile__details__submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #27ae60;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile__details__submit:hover {
+  background: #218c54;
+  transform: scale(1.05);
+}
+.add_btn_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adds spacing */
+}
+/* Add Button */
+.add_btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add_btn:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
