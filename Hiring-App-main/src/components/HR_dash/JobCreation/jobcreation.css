@@ -5,7 +5,7 @@
   min-height: 100vh;
   padding-top: 120px;
   background: #f0f2f5;
-  background: url('D:\Sachin Projects\Hiring-App-main (1)\Hiring-App-main\pics\futuristic-white-technology-background_23-2148390336.avif') no-repeat center center/cover;
+  background: url('Hiring-App-main\public\images\fut.avif') no-repeat center center/cover;
   align-items: center;
   justify-content: center;
 }
@@ -197,3 +197,4 @@
     text-align: center;
   }
 }
+
