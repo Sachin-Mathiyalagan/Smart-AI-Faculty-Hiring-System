@@ -2,8 +2,6 @@
   text-align: center;
   background: rgb(2,0,36);
   background: linear-gradient(to right, rgba(2, 0, 36, 0.8), rgba(9, 9, 121, 0.8), rgba(0, 212, 255, 0.8)), 
-    url('Hiring-App-main\public\images\home.jpeg') no-repeat center center/cover;
-
 }
 
 .App-logo {
@@ -40,5 +38,6 @@
     transform: rotate(360deg);
   }
 }
+
 
 
