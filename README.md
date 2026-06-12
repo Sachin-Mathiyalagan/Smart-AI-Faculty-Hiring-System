@@ -44,13 +44,13 @@ All candidate data is stored securely following GDPR guidelines.
 
 | Component | Technology Used |
 |------------|----------------|
-| **Frontend** | React.js / Next.js / Tailwind CSS |
-| **Backend** | Node.js / Express.js or Flask (Python) |
+| **Frontend** | React.js / Tailwind CSS |
+| **Backend** | Node.js / Flask (Python) |
 | **Database** | MongoDB / PostgreSQL |
 | **AI & ML Models** | Python (Scikit-learn, NLTK, SpaCy) |
 | **Resume Parser** | NLP-based text extraction |
 | **Matching Model** | EncoreWebSM (Semantic Matching) |
-| **Cloud Hosting** | AWS / Render / Vercel |
+| **Cloud Hosting** |  Vercel |
 | **Security** | JWT Authentication, Data Encryption, GDPR Compliance |
 
 ---
